@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="cordova-2.7.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/cordova-2.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../google-play-services_lib/gen" />
+      <root url="file://$PROJECT_DIR$/../google-play-services_lib/src" />
+    </SOURCES>
+  </library>
+</component>
