@@ -3,6 +3,7 @@
   <component name="FacetManager">
     <facet type="android" name="Android">
       <configuration>
+        <option name="UPDATE_PROPERTY_FILES" value="false" />
         <notImportedProperties>
           <property>MANIFEST_FILE_PATH</property>
           <property>RESOURCES_DIR_PATH</property>
@@ -14,6 +15,9 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
+    <content url="file://$MODULE_DIR$/../BaseGameUtils">
+      <sourceFolder url="file://$MODULE_DIR$/../BaseGameUtils/src" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
@@ -29,6 +33,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../google-play-services_lib/libs/google-play-services.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../BaseGameUtils/libs/android-support-v4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

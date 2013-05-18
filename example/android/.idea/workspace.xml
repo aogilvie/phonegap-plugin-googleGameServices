@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="org.apache" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="googlegame" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be3585d3-884d-446c-ac3c-b220c86a692a" name="Default" comment="" />
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="be3585d3-884d-446c-ac3c-b220c86a692a" time="1368785521155" ignored="false" />
+    <file path="/fragment.java" changelist="be3585d3-884d-446c-ac3c-b220c86a692a" time="1368849956496" ignored="false" />
     <file path="/googleGameServices.java" changelist="be3585d3-884d-446c-ac3c-b220c86a692a" time="1368786635553" ignored="false" />
     <file path="/googleGameServicesPlugin.java" changelist="be3585d3-884d-446c-ac3c-b220c86a692a" time="1368786630653" ignored="false" />
     <file path="/config.xml" changelist="be3585d3-884d-446c-ac3c-b220c86a692a" time="1368786272332" ignored="false" />
+    <file path="/GoogleGameServices.java" changelist="be3585d3-884d-446c-ac3c-b220c86a692a" time="1368849555664" ignored="false" />
+    <file path="/GoogleGameServicesPlugin.java" changelist="be3585d3-884d-446c-ac3c-b220c86a692a" time="1368849865070" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +32,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -67,6 +68,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -75,7 +77,39 @@
     <favorites_list name="android" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="GoogleGameServicesPlugin.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/jp/wizcorp/phonegap/plugin/googleGameServices/GoogleGameServicesPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="61" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.32967034">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseGameActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../BaseGameUtils/src/com/google/example/games/basegameutils/BaseGameActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="48" selection-start="914" selection-end="914" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoogleGameServices.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jp/wizcorp/phonegap/plugin/googleGameServices/GoogleGameServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="22" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -92,16 +126,17 @@
         <option value="$PROJECT_DIR$/res/xml/config.xml" />
         <option value="$PROJECT_DIR$/src/jp/wizcorp/phonegap/plugin/googleGameServices/googleGameServicesPlugin.java" />
         <option value="$PROJECT_DIR$/src/jp/wizcorp/phonegap/plugin/googleGameServices/googleGameServices.java" />
-        <option value="$PROJECT_DIR$/src/jp/wizcorp/phonegap/plugin/googleGameServices/GoogleGameServicesPlugin.java" />
         <option value="$PROJECT_DIR$/src/jp/wizcorp/phonegap/plugin/googleGameServices/GoogleGameServices.java" />
+        <option value="$PROJECT_DIR$/assets/www/phonegap/plugin/googleGameServices/googleGameServices.js" />
+        <option value="$PROJECT_DIR$/src/jp/wizcorp/phonegap/plugin/googleGameServices/GoogleGameServicesPlugin.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="21" />
-    <option name="y" value="42" />
-    <option name="width" value="1900" />
-    <option name="height" value="1058" />
+    <option name="x" value="4" />
+    <option name="y" value="22" />
+    <option name="width" value="1276" />
+    <option name="height" value="778" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -129,6 +164,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -304,26 +340,25 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/copyPlugin.sh" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BaseGameUtils/libs/android-support-v4.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Android Application.android">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -432,7 +467,7 @@
       <RunnerSettings RunnerId="AndroidDebugRunner" />
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method>
-        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_Phonegap_copy-plugin" />
+        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_PhoneGap_plugin-copy" />
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -478,13 +513,14 @@
       <updated>1368777673798</updated>
       <workItem from="1368777679529" duration="583000" />
       <workItem from="1368778435760" duration="7958000" />
+      <workItem from="1368847490736" duration="4401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8541000" />
+    <option name="totallyTimeSpent" value="12942000" />
   </component>
-  <component name="TodoView" selected-index="0">
+  <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -505,28 +541,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="21" y="42" width="1900" height="1058" extended-state="0" />
+    <frame x="4" y="22" width="1276" height="778" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35074627" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.52279633" sideWeight="0.35528454" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.52279633" sideWeight="0.6447154" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973032" sideWeight="0.67001003" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28209278" sideWeight="0.6705757" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2813008" sideWeight="0.47720364" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35074627" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -563,7 +599,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
@@ -594,16 +630,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/copyPlugin.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="242" selection-end="242" vertical-scroll-proportion="0.37437603">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/phonegap/plugin/googleGameServices/googleGameServices.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="65" selection-start="416" selection-end="440" vertical-scroll-proportion="0.44925123">
-          <folding />
-        </state>
+        <state line="15" column="12" selection-start="242" selection-end="242" vertical-scroll-proportion="0.37437603" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/config.xml">
@@ -620,9 +647,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/phonegap/plugin/googleGameServices/googleGameServices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.4710145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BaseGameUtils/src/com/google/example/games/basegameutils/BaseGameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="48" selection-start="914" selection-end="914" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/jp/wizcorp/phonegap/plugin/googleGameServices/GoogleGameServices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.49916804">
+        <state line="36" column="22" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -631,7 +672,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jp/wizcorp/phonegap/plugin/googleGameServices/GoogleGameServicesPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="49" selection-start="370" selection-end="370" vertical-scroll-proportion="0.34941763">
+        <state line="31" column="61" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.32967034">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -695,7 +736,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

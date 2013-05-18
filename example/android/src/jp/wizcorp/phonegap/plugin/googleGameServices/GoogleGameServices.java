@@ -7,68 +7,45 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.util.Log;
+import android.view.View;
 
+import com.google.example.games.basegameutils.BaseGameActivity;
 
+public class GoogleGameServices extends BaseGameActivity implements View.OnClickListener {
 
-public class GoogleGameServices {
-	
-	private static ProgressDialog pd;
-	public static boolean isVisible = false;
+    @Override
+    public void onSignInFailed() {
+        // Sign-in failed
+    }
 
+    @Override
+    public void onSignInSucceeded() {
+        // Sign-in worked!
+    }
 
-	public static void show(Activity activity, JSONArray data) {
-		// create and show the spinner
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            /*
+            case R.id.button_sign_in:
+                // Start the sign-in flow
+                beginUserInitiatedSignIn();
+                break;
+            case R.id.button_sign_out:
+                // Sign out.
+                signOut();
+                break;
+            case R.id.button_win:
 
-		JSONObject dataObj = null;
-		String text = "Loading...";
-		try {
-			dataObj = data.getJSONObject(0);
-		} catch (JSONException e) {
-			// failed to get any data
-			dataObj = null;
-		}
-		if (dataObj != null ) {
-			if ( dataObj.has("labelText")) {
-				try {
-					text = (String) dataObj.get("labelText");
-				} catch (JSONException e) {
-					// failed for some reason
-				}
-			}
-		}
+                break;
+            */
+        }
+    }
 
-		final String labelText = text;
-		final Activity _ctx = activity;
-		
-		if ( !isVisible ) {
-			Log.i("wizSpinner", "[display spinner] ******* ");
-			
-			activity.runOnUiThread(
-	            new Runnable() {
-	                public void run() {
-	                	pd = ProgressDialog.show(_ctx, null, labelText, true, false);
-	                }
-	            }
-	        );
-			
-			isVisible = true;
-		}
-	}
-
-	public static void hide(Activity activity) {
-		// hide the spinner
-		if ( isVisible ) {
-			Log.i("wizSpinner", "[Hiding spinner] ******* ");
-			
-			activity.runOnUiThread(
-	            new Runnable() {
-	                public void run() {
-	            		pd.dismiss();
-	                }
-	            }
-	        );
-			isVisible = false;
-		}
-	}
-
+    public void unlockAchievement(String achievement) {
+        if (getGamesClient().isConnected()) {
+            // Unlock the achievement.
+            getGamesClient().unlockAchievement(achievement);
+        }
+    }
 }

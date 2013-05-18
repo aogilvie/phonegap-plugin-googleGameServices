@@ -21,6 +21,7 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 public class GoogleGameServicesPlugin extends CordovaPlugin {
 
 	private String TAG = "GoogleGameServicesPlugin";
+    private GoogleGameServices googleGameServices;
 
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -28,32 +29,30 @@ public class GoogleGameServicesPlugin extends CordovaPlugin {
         // Check for compatible Google Play services APK
         if (GooglePlayServicesUtil.isGooglePlayServicesAvailable(this.cordova.getActivity()) != 0) {
             // Google Play Services not available, return error
-            Log.e(TAG, "Google Play Services are unavailable");
+            Log.e(TAG, "Google Play Services are unavailable. Error: " + GooglePlayServicesUtil.isGooglePlayServicesAvailable(this.cordova.getActivity()));
             callbackContext.error("Google Play Services are unavailable");
             return true;
         }
 
-		if (action.equals("test")) {
-			// create spinner with options
-			// Not supported in Android
-            Log.d(TAG, "test");
-			callbackContext.success();
+        if (googleGameServices == null) {
+            googleGameServices = new GoogleGameServices();
+        }
+
+		if (action.equals("authenticate")) {
+            Log.i(TAG, "Authenticating with Google Game Services");
 			return true;
-		} else if (action.equals("show")) {
-			// Show spinner with options
-			Log.i(TAG, "[SHOW SPINNER] ******* ");
-			// WizSpinner.show(cordova.getActivity(), args);
-			// callbackContext.success();
+		} else if (action.equals("showLeaderboard")) {
+
 			return true;
-		} else if (action.equals("hide")) {
-			// Hide spinner with options
-			Log.i(TAG, "[HIDE SPINNER] ******* ");
-			// WizSpinner.hide(cordova.getActivity());
-			// callbackContext.success();
-			return true;
-		} 
-		
-		return false;
+		} else if (action.equals("reportAchievement")) {
+
+            return true;
+        } else if (action.equals("showAchievements")) {
+            googleGameServices.unlockAchievement(args.getString(0));
+            return true;
+        }
+
+        return false;
 	}
 	
 }

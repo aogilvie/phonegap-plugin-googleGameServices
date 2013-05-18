@@ -8,14 +8,14 @@
 
 if (window.cordova) {
     window.document.addEventListener("deviceready", function () {
-        cordova.exec(null, null, "GoogleGameServicesPlugin", "test", []);
+        cordova.exec(null, null, "GoogleGameServicesPlugin", "authenticate", []);
     }, false);
 }
 
 var googleGameServices = {
 
-	test : function(id, options) {
+	authenticate : function() {
 
-		return cordova.exec(null, null, "GoogleGameServicesPlugin", "test", []);
+		return cordova.exec(null, null, "GoogleGameServicesPlugin", "authenticate", []);
 	}
 }

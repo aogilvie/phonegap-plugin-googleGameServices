@@ -21,6 +21,7 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 public class GoogleGameServicesPlugin extends CordovaPlugin {
 
 	private String TAG = "GoogleGameServicesPlugin";
+    private GoogleGameServices googleGameServices;
 
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -33,27 +34,25 @@ public class GoogleGameServicesPlugin extends CordovaPlugin {
             return true;
         }
 
-		if (action.equals("test")) {
-			// create spinner with options
-			// Not supported in Android
-            Log.d(TAG, "test");
-			callbackContext.success();
+        if (googleGameServices == null) {
+            googleGameServices = new GoogleGameServices();
+        }
+
+		if (action.equals("authenticate")) {
+
 			return true;
-		} else if (action.equals("show")) {
-			// Show spinner with options
-			Log.i(TAG, "[SHOW SPINNER] ******* ");
-			// WizSpinner.show(cordova.getActivity(), args);
-			// callbackContext.success();
+		} else if (action.equals("showLeaderboard")) {
+
 			return true;
-		} else if (action.equals("hide")) {
-			// Hide spinner with options
-			Log.i(TAG, "[HIDE SPINNER] ******* ");
-			// WizSpinner.hide(cordova.getActivity());
-			// callbackContext.success();
-			return true;
-		} 
-		
-		return false;
+		} else if (action.equals("reportAchievement")) {
+
+            return true;
+        } else if (action.equals("showAchievements")) {
+            googleGameServices.unlockAchievement(args.getString(0));
+            return true;
+        }
+
+        return false;
 	}
 	
 }
