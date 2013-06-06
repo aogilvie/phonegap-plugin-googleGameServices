@@ -1,4 +1,10 @@
 phonegap-plugin-googleGameServices
 ==================================
 
-Cordova plugin for Google Game Services
+# ! IN PROGRESS !
+
+This plugin is in very early development phase... 
+
+##About
+
+Cordova plugin for Google Game Services.
