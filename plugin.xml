@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.github.aogilvie.phonegap.plugin.googleGameService"
+    version="1.0.0">
+
+    <name>Google Game Service Plugin</name>
+    
+    <description>Cordova plugin for Google Game Services.</description>
+    
+    <author>Ally Ogilvie - @allyogilvie</author>
+    
+    <keywords>google, game, service</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <license>MIT</license>
+
+    <js-module src="www/phonegap/plugin/googleGameService/googleGameService.js" name="googleGameService" target="phonegap/plugin/googleGameService/googleGameService.js">
+        <clobbers target="window.wizSpinner" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="GoogleGameServicePlugin" >
+            <param name="android-package" value="com.github.aogilvie.phonegap.plugin.googleGameService.GoogleGameServicePlugin"/>
+        </feature>
+    </config-file>
+
+    <!-- auto deploy the app id straight to resource via CLI -->
+    <source-file src="platforms/android/res/values/ggs.xml" target-dir="res/values" />
+    <config-file target="res/values/ggs.xml" parent="/*">
+        <string name="ggs_app_id">$APP_ID</string>
+    </config-file>
+        
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <!-- TODO activity meta data will need to go here -->
+    </config-file>
+
+    <source-file src="platforms/android/src/com/github/aogilvie/phonegap/plugin/googleGameService/GoogleGameServicePlugin.java" 
+            target-dir="src/com/github/aogilvie/phonegap/plugin/googleGameService"/>
+    <source-file src="platforms/android/src/com/github/aogilvie/phonegap/plugin/googleGameService/GoogleGameService.java" 
+            target-dir="src/com/github/aogilvie/phonegap/plugin/googleGameService"/> 
+
+    </platform>
+
+</plugin>
